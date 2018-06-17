@@ -50,3 +50,20 @@ function getFileExt(str) {
     return ms[ms.length - 1];
 }
 </script>
+
+
+Upd:
+
+<script type="text/javascript">
+    var str = '/images/cms/thumbs/34324-3294-29349324-9234/some_name_AAA_130_auto.jpg';
+    console.log('before: ' + str);
+
+    var reOldName = /(\/[_A-Za-z0-9\.]+)$/
+    var reWidthHeight = /(_[A-Za-z0-9]+){2}\./;
+    //var re2 = /\.([\w]+)$/;
+
+    var file = str.match(reOldName)[0];
+    var newfile = file.replace(reWidthHeight,'.'); // $1, $2);
+
+    console.log('after: ' + newfile);
+</script>
