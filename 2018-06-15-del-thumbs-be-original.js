@@ -67,3 +67,24 @@ Upd:
 
     console.log('after: ' + newfile);
 </script>
+
+
+Upd 2018-06-18:
+
+<script>
+$( document ).ready(function() {
+    var reOldName = /(\/[_A-Za-z0-9\.]+)$/
+    var reWidthHeight = /(_[A-Za-z0-9]+){2}\./;
+    $('img').each(function() {
+        var src = '' + $(this).attr('src');
+        console.log('before: ' + src);
+        var nsrc = '/images/cms/data';
+        if (src.search('thumbs/') != -1) {
+            var file = src.match(reOldName)[0];
+            var newfile = file.replace(reWidthHeight,'.');
+            console.log('new: ' + nsrc + newfile);
+            $(this).attr('src', nsrc + newfile);
+        }
+    });
+});
+</script>
