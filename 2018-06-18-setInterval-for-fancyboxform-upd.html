@@ -4,16 +4,16 @@
 
 <script>
 $( document ).ready(function() {
-    console.log('setInterval');
     setInterval(function() {
+        var msg = 'Отправляя эту форму, вы соглашаетесь с <a href=\"/company/about/privacy-policy/\">Политикой конфиденциальности</a> и даете согласие на обработку персональных данных.';
         var st = $('#fancybox-close').css('display');
         if (st != 'none') {
             span = $('.form_container')
                 .find('.pdn.form_field')
                 .find('span')
                 .each(function() {
-                    $(this).html('Отправляя эту форму, вы соглашаетесь с <a href=\"https://rarus.ru/company/about/privacy-policy/\">Политикой конфиденциальности</a> и даете согласие на обработку персональных данных компанией "1С-Рарус".');
-                })
+                    $(this).html(msg);
+                });
         }
     }, 500);
 });
