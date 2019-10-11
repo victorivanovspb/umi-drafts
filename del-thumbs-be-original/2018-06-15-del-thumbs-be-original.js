@@ -1,14 +1,5 @@
+'use strict';
 
-1. Допустим есть корневая папка с картинками: /images/cms/data
-Если на главной странице картинка img.png будет иметь путь /images/cms/data/img.png
-А в подразделе /catalog/nasosy картинка another.jpg будет иметь путь /images/cms/data/catalog/nasosy/another.jpg
-То у нас получится сделать все КРАСИВО
-
-2. Все изображения должны быть с одинаковыми пропорциями - тогда можно будет стилями их настроить.
-
-
-
-<script>
 $( document ).ready(function() {
     $('img').each(function() {
         var src = '' + $(this).attr('src');
@@ -49,7 +40,7 @@ function getFileExt(str) {
     ms = str.split('.');
     return ms[ms.length - 1];
 }
-</script>
+
 
 
 Upd:
