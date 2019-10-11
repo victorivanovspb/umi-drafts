@@ -1,4 +1,4 @@
-### del-thumbs-be-original
+# del-thumbs-be-original
 
 Допустим ряд обстоятельств:
 
